@@ -1,5 +1,7 @@
 const express = require('express') //importacao do pacote
 const app = express() //instanciando express
+const PORT = process.env.PORT || 3000
+
 
 const alunos = [
   {
@@ -20,9 +22,5 @@ const alunos = [
   }
 ]
 
-app.get('/', function (req, res) { //endereco da requisicao onde e retornado hello world
-  res.send(alunos)
-})
-
-app.listen(3000) //execucao do servidor
-
+app.get('/', (req, res) => res.send(alunos))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
