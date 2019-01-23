@@ -1,0 +1,31 @@
+{
+  "name": "padiola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogrs/padiola.git"
+  },
+  "keywords": [],
+  "author": "rogerio ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogrs/padiola/issues"
+  },
+  "homepage": "https://github.com/rogrs/padiola#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "save-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
