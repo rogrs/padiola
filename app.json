@@ -1,7 +1,12 @@
 {
-    "name": "Node.js Sample",
-    "description": "A barebones Node.js app using Express 4",
-    "repository": "https://github.com/rogrs/padiola",
-    "logo": "https://node-js-sample.herokuapp.com/node.png",
-    "keywords": ["node", "express", "static"]
+  "name": "Padiola",
+  "description": "Heroku Connect Sample App - Padiola",
+  "repository": "https://github.com/rogrs/padiola",
+  "success_url": "/setup.html",
+  "env": {
+    "PGSSLMODE": {
+      "description": "Require SSL for Postgres",
+      "value": "require"
+    }
   }
+}
