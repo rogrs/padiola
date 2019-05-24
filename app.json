@@ -11,9 +11,6 @@
   "formation": {},
   "addons": [
     {
-      "plan": "herokuconnect"
-      },
-    {
       "plan": "heroku-postgresql",
       "options": {
         "version": "11"

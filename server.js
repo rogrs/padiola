@@ -1,25 +1,25 @@
-const http = require('http');
-const { Client } = require('pg');
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express();
+
 const PORT = process.env.PORT || 5000;
 const { DATABASE_URL } = process.env;
-const server = http.createServer((req, res) => {
-  const client = new Client({
-    connectionString: DATABASE_URL,
-  });
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  client.connect()
-    .then(() => client.query('SELECT * FROM salesforcefielo.FieloPLT__Program__c'))
-    .then((result) => {
-      res.end(`${result.rows[0].name}\n`);
-      client.end();
-    })
-    .catch(() => {
-      res.end('ERROR');
-      client.end();
-    });
-});
-server.listen(PORT, () => {
+
+
+
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
+
+app.get('/', (request, response) => {
+  response.json({ info: 'Node.js, Express, and Postgres API' })
+})
+
+
+app.listen(PORT, () => {
   // eslint-disable-next-line
   console.log(`Server running on ${PORT}/`);
 });
