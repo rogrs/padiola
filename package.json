@@ -14,10 +14,13 @@
   "author": "Rogerio Ribeiro",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "request": "2.88.0",
+    "tape": "4.10.1"
   },
   "dependencies": {
     "body-parser": "^1.13.2",
+    "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "pg": "^7.11.0"
   }

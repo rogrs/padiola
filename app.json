@@ -1,9 +1,14 @@
 {
-  "name": "Node js Sample",
+  "name": "Nodejs Sample",
   "description": "A nodejs app using heroku connect",
   "repository": "https://github.com/rogrs/padiola",
   "logo": "https://github.com/rogrs/padiola/logo.png",
   "keywords": ["express", "nodejs", "heroku"],
+  "env": {},
+  "scripts": {
+    "postdeploy": "psql $DATABASE_URL -f seed.sql"
+  },
+  "formation": {},
   "addons": [
     {
       "plan": "herokuconnect"
@@ -13,6 +18,11 @@
       "options": {
         "version": "11"
       }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
     }
   ]
 }
