@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express();
+import db from './db/db';
 
 const PORT = process.env.PORT || 5000;
 const { DATABASE_URL } = process.env;
