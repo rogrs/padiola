@@ -1,9 +1,9 @@
 {
-  "name": "Nodejs Sample",
-  "description": "A nodejs app using heroku connect",
+  "name": "padiola",
+  "description": "A nodejs app using heroku postgres jsonb",
   "repository": "https://github.com/rogrs/padiola",
   "logo": "https://github.com/rogrs/padiola/logo.png",
-  "keywords": ["express", "nodejs", "heroku"],
+  "keywords": ["express", "nodejs", "heroku", "postegres","jsonb"],
   "env": {},
   "scripts": {
     "postdeploy": "psql $DATABASE_URL -f seed.sql"
@@ -11,10 +11,7 @@
   "formation": {},
   "addons": [
     {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "11"
-      }
+      "plan": "heroku-postgresql"
     }
   ],
   "buildpacks": [
