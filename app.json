@@ -5,7 +5,12 @@
   "logo": "https://github.com/rogrs/padiola/logo.png",
   "keywords": ["express", "nodejs", "heroku", "postegres","jsonb"],
   "env": {},
+  "engines": {
+    "node": "12.1.0",
+    "npm": "6.x"
+  },
   "scripts": {
+    "start": "npm start",
     "postdeploy": "psql $DATABASE_URL -f seed.sql"
   },
   "formation": {},
