@@ -1,7 +1,10 @@
 import Sequelize from 'sequelize';
 
+
+var connectionString = process.env.DATABASE_URL || "postgres://padiola:padiola@localhost:5432/padiola";
+
 const sequelize = new Sequelize(
-  process.env.DATABASE_URL,
+  connectionString,
   {
     dialect:  'postgres',
     protocol: 'postgres',

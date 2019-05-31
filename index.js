@@ -8,6 +8,8 @@ import routes from './routes';
 
 const app = express();
 
+
+const port = process.env.PORT || 3000;
 // Application-Level Middleware
 
 app.use(cors());
@@ -28,6 +30,7 @@ app.use(async (req, res, next) => {
 app.use('/api/v1/session', routes.session);
 app.use('/api/v1/users', routes.user);
 app.use('/api/v1/messages', routes.message);
+app.use('/api/v1/transactions', routes.transaction);
 
 // Start
 
@@ -38,8 +41,8 @@ sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
     createUsersWithMessages();
   }
 
-  app.listen(process.env.PORT, () =>
-    console.log(`Example app listening on port ${process.env.PORT}!`),
+  app.listen(port, () =>
+    console.log('Example app listening on port !'+port),
   );
 });
 
