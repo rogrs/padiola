@@ -3,7 +3,7 @@
   "description": "A nodejs app using heroku postgres jsonb",
   "repository": "https://github.com/rogrs/padiola",
   "logo": "https://github.com/rogrs/padiola/logo.png",
-  "keywords": ["express", "nodejs", "heroku", "postegres","jsonb"],
+  "keywords": [ "nodejs", "heroku"],
   "env": {},
   "engines": {
     "node": "12.1.0",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "npm start",
-    "postdeploy": "psql $DATABASE_URL -f seed.sql"
+    "postdeploy": "psql $DATABASE_URL -f execute.sql"
   },
   "formation": {},
   "addons": [
