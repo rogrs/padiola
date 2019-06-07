@@ -5,7 +5,7 @@ An easy way to get started with a Express server with PostgreSQL with Node.js.
 
 ##Deploy Heroku
 
-<a href="https://heroku.com/deploy?template=https://github.com/leandrosjm/fielo">
+<a href="https://heroku.com/deploy?template=https://github.com/rogrs/padiola">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
@@ -32,8 +32,8 @@ An easy way to get started with a Express server with PostgreSQL with Node.js.
 
 ## Installation
 
-* `git clone https://github.com/leandrosjm/fielo.git`
-* `cd fielo`
+* `git clone https://github.com/rogrs/padiola.git`
+* `cd padiola`
 * `npm install`
 * `npm start`
 * optional: include *.env* in your *.gitignore*
